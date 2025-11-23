@@ -1,0 +1,8 @@
+{
+  "name": "Gemini Balloon Popper",
+  "description": "An interactive AR game where you pop falling balloons with your hands using motion detection, featuring live commentary from Gemini.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
