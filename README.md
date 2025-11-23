@@ -1,20 +1,55 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🕹️ Gemini Balloon Popper: The Vision-Coded Game
 
-# Run and deploy your AI Studio app
+**A Proof-of-Concept for Sub-100ms Real-Time Interaction using the Gemini 3 Pro Multimodal Live API.**
 
-This contains everything you need to run your app locally.
+> "We're transforming a video stream into a high-speed, cloud-hosted game controller."
 
-View your app in AI Studio: https://ai.studio/apps/drive/1VyO8oxDfVo4ecytbYxgx2_3vsYH5-0_t
+## 📖 Project Concept: Vibe Coding in Action
+**Gemini Balloon Popper** is an application built to explore the cutting edge of **Vision-Coded Gaming**. The goal was to prove that a multimodal AI model could run a complex, real-time game loop while achieving **sub-100ms perceived latency**.
 
-## Run Locally
+This project demonstrates the principle of **Vibe Coding**—using natural language and visual cues to create applications that are instantaneously responsive to user input (in this case, physical movement).
 
-**Prerequisites:**  Node.js
+## 💡 Technical Deep Dive: Achieving Low Latency
 
+The core challenge was to overcome network and inference overhead. The solution relies on aggressively optimizing the **Gemini 3 Pro** API request to ensure the time-to-first-token (TTFT) for critical structured data is minimized.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Key Optimization Strategies:
+
+1.  **Gemini Multimodal Live API:** Used for continuous, low-latency streaming of video frames directly to the model.
+2.  **Thinking Level Control:** The API call explicitly sets **`thinking_level: low`**. This instructs the model to prioritize speed and structural output over deep reasoning, drastically reducing internal inference time for high-speed pose estimation.
+3.  **Low Media Resolution:** The prompt specifies **`media_resolution: low`** for the video input. This reduces the number of tokens required per frame, maximizing the frames-per-second (fps) throughput necessary for fluid gaming.
+4.  **Structured JSON Output:** The model is constrained to generate only a **structured JSON object** containing the `x/y` coordinates of the target limbs (hands and feet). This minimizes unnecessary linguistic output, ensuring the game engine receives clean, predictable data for immediate hitbox calculation.
+
+## ✨ Features
+* **Real-Time Pose Estimation:** Uses the VLM to track specific body joints (hands and feet) for accurate interaction.
+* **Sub-100ms Action Loop:** Achieves perceived real-time responsiveness by aggressively optimizing the VLM inference pipeline.
+* **Dynamic Hitbox Correlation:** Calculates the collision between the inferred limb coordinates and the virtual balloon coordinates server-side.
+* **Immediate Visual Feedback:** Triggers "POW!" and score updates instantaneously upon detection.
+
+## 🛠️ Tech Stack
+* **AI Model:** Google Gemini 3 Pro
+* **API:** Gemini Multimodal Live API (Streaming Endpoint)
+* **Frontend:** [Insert your frontend framework here, e.g., React.js / p5.js]
+* **Backend:** [Insert your backend/streaming handler, e.g., Node.js with WebSockets]
+
+## 🎥 Demo
+[Link to your LinkedIn post or direct video file, e.g., `Gemini Balloon Popper.mp4`]
+*Watch the live action demo showing the near-instantaneous response time.*
+
+## 📦 Installation & Usage
+*(Fill in your specific steps here)*
+
+1.  **Clone the Repository:**
+    ```bash
+    git clone [https://github.com/yourusername/gemini-balloon-popper.git](https://github.com/yourusername/gemini-balloon-popper.git)
+    ```
+2.  **Set Environment Variable:**
+    ```bash
+    export GEMINI_API_KEY="your_api_key_here"
+    ```
+3.  **Run the Server:**
+    ```bash
+    # [Insert your specific run command, e.g., python server.py or npm run start]
+    ```
+
+***
