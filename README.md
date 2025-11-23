@@ -26,18 +26,12 @@ The core challenge was to overcome network and inference overhead. The solution 
 * **Dynamic Hitbox Correlation:** Calculates the collision between the inferred limb coordinates and the virtual balloon coordinates server-side.
 * **Immediate Visual Feedback:** Triggers "POW!" and score updates instantaneously upon detection.
 
-## 🛠️ Tech Stack
-* **AI Model:** Google Gemini 3 Pro
-* **API:** Gemini Multimodal Live API (Streaming Endpoint)
-* **Frontend:** [Insert your frontend framework here, e.g., React.js / p5.js]
-* **Backend:** [Insert your backend/streaming handler, e.g., Node.js with WebSockets]
-
 ## 🎥 Demo
-[Link to your LinkedIn post or direct video file, e.g., `Gemini Balloon Popper.mp4`]
+[https://www.linkedin.com/posts/usama-nisar_gemini3pro-gemini-gemini3pro-activity-7398322136408428544-g9kR?utm_source=share&utm_medium=member_desktop&rcm=ACoAABTaY3MB43v_1QvvzsfUqKAgV3BeoFe5HAg]
 *Watch the live action demo showing the near-instantaneous response time.*
 
 ## 📦 Installation & Usage
-*(Fill in your specific steps here)*
+
 
 1.  **Clone the Repository:**
     ```bash
